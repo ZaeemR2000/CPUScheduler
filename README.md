@@ -1,61 +1,49 @@
-# CPUScheduler
- 
-Overview
-    This project implements a simulation of three CPU scheduling algorithms:
+# CPU Scheduling Simulation Project
 
-        First Come First Serve (FCFS)
-        Round Robin (RR)
-        Shortest Job First (SJF)
+## Overview
 
-The simulator reads task information from an input file and uses the specified scheduling algorithm to simulate task execution. The results include a time-based Gantt-style output showing which task is executed at each time unit, along with key statistics such as average waiting time, turnaround time, response time, and CPU usage.
+This project simulates three different CPU scheduling algorithms implemented in **C++**:
 
-Usage Instructions
-    Compilation
-        The project is developed using C++ and has been tested in Visual Studio. Follow these steps to compile the project:
+1. **First Come First Serve (FCFS)** 
+2. **Round Robin (RR)** 
+3. **Shortest Job First (SJF)**
 
-        Open the Project in Visual Studio.
+The program reads task data from an input file and simulates the scheduling of tasks based on the selected algorithm. The output includes a Gantt-style schedule and statistics such as average waiting time, turnaround time, response time, and CPU usage.
 
-        Ensure that the scheduler.cpp file is present in the Source Files folder within the Visual Studio project.
-        Build the Project.
+## Features
 
-        Select Build > Build Solution or press Ctrl + Shift + B to compile the program.
+- **FCFS**: Non-preemptive algorithm where tasks are executed in the order they arrive.
+- **Round Robin (RR)**: Preemptive algorithm where each task is given a time slice (quantum) to execute before moving to the next task.
+- **Shortest Job First (SJF)**: Preemptive algorithm that selects the task with the shortest burst time for execution.
 
-Running the Program
-    
-    The program is executed with command-line arguments to specify the input file and the scheduling algorithm. The general format is as follows:
-    scheduler.exe <input_file> [FCFS|RR|SJF] [time_quantum]
+## Technologies Used
 
-    input_file: A file containing process task details.
-    [FCFS|RR|SJF]: The scheduling algorithm to use.
-    time_quantum: The time slice for the Round Robin scheduling algorithm (only required for RR).
+- **Language**: C++
+- **IDE**: Visual Studio 2022
+- **Compiler**: Microsoft Visual C++ (MSVC)
+- **Operating System**: Windows 10
 
-Example Commands:
+## Project Structure
 
-    First Come First Serve (FCFS): scheduler.exe input.1 FCFS
-    Round Robin (RR) with time quantum of 4 milliseconds: scheduler.exe input.1 RR 4
-    Shortest Job First (SJF): scheduler.exe input.1 SJF
+- `scheduler.cpp`: The main C++ file implementing the three scheduling algorithms.
+- `input.1`: Example input file containing task data.
+- Screenshots for each algorithm (FCFS, RR, SJF) showing execution and results.
 
-Input File Format
+## Compilation and Execution
 
-    The input file should contain task information in the following format:
-    pid arrival_time burst_time
-    pid: Process ID (an integer).
-    arrival_time: Time when the task arrives in the system (in milliseconds).
-    burst_time: The CPU time required by the task (in milliseconds).
+### Compilation
 
-Command-Line Arguments in Visual Studio
+To compile the project using **Visual Studio**:
 
-    Right-click the project name in Solution Explorer and select Properties.
-    Navigate to Configuration Properties > Debugging.
-    In the Command Arguments field, enter the required arguments. Example:
+1. Clone the repository.
+2. Open the project in Visual Studio.
+3. Ensure the `scheduler.cpp` file is in the **Source Files** folder.
+4. Build the project:
+   - Select **Build > Build Solution** or press `Ctrl + Shift + B`.
 
-        For FCFS: C:\path\to\input.1 FCFS
-        For RR: C:\path\to\input.1 RR 4
-        For SJF: C:\path\to\input.1 SJF
-    Click Apply and OK.
+### Running the Program
 
-Execution Output
-After running the program, it will display the Gantt-style task scheduling and the following statistics:
-    Average CPU Usage
-    Average Waiting Time
-    Average Turnaround Time
+The program expects the following command-line arguments:
+
+```bash
+scheduler.exe <input_file> [FCFS|RR|SJF] [time_quantum]
