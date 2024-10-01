@@ -1,0 +1,5 @@
+﻿  scheduler.cpp
+C:\Users\Zaeem\source\repos\Scheduler\Scheduler\scheduler.cpp(61,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Zaeem\source\repos\Scheduler\Scheduler\scheduler.cpp(113,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Zaeem\source\repos\Scheduler\Scheduler\scheduler.cpp(197,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Scheduler.vcxproj -> C:\Users\Zaeem\source\repos\Scheduler\x64\Debug\Scheduler.exe
